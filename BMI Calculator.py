@@ -61,14 +61,15 @@ height_entry = tk.Entry(window, width=25)
 height_entry.pack(pady=5)
 
 # Button
-calculate_btn = tk.Button(
+calculate_btn.pack(pady=15)
+clear_btn = tk.Button(
     window,
-    text="Calculate BMI",
-    command=calculate_bmi,
+    text="Clear",
+    command=clear_fields,
     width=20
 )
 
-calculate_btn.pack(pady=15)
+clear_btn.pack(pady=5)
 
 # Result
 result_label = tk.Label(
@@ -76,8 +77,3 @@ result_label = tk.Label(
     text="Enter your details",
     font=("Arial", 12)
 )
-
-result_label.pack(pady=10)
-
-# Run
-window.mainloop()
